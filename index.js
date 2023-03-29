@@ -62,12 +62,12 @@ app.use(
 
 app.use(express.json())
 app.use(cookieParser())
-app.use("/api/auth", authRoutes)
-app.use("/api/admin", adminRoutes)
-app.use("/api/student", studentRoutes)
+app.use("/api/auth", cors(), authRoutes)
+app.use("/api/admin", cors(), adminRoutes)
+app.use("/api/student", cors(), studentRoutes)
 
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8800;
 
 app.listen(process.env.PORT || PORT, () => {
     console.log(`Server running on port ${PORT}`)
