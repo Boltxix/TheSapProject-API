@@ -46,7 +46,7 @@ app.use(helmet.contentSecurityPolicy({
 
 app.use(function (req, res, next) {
     //Passive (10098 - Cross-Domain Misconfiguration) CWE ID 264
-    res.header("Access-Control-Allow-Origin", "https://master--warm-strudel-d45ad5.netlify.app/"); // update the domain name
+    res.header("Access-Control-Allow-Origin", "https://master--warm-strudel-d45ad5.netlify.app"); // update the domain name
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     res.header("Access-Control-Max-Age", "86400");
     //Passive (10020 - Anti-clickjacking Header) CWE ID 1021
@@ -56,7 +56,7 @@ app.use(function (req, res, next) {
 
 app.use(
     cors({
-        origin: 'https://master--warm-strudel-d45ad5.netlify.app/',
+        origin: 'https://master--warm-strudel-d45ad5.netlify.app',
     })
 );
 
