@@ -58,8 +58,7 @@ app.use("/api/admin", adminRoutes)
 app.use("/api/student", studentRoutes)
 
 
-
-
+const PORT = process.env.PORT || 3000;
 
 app.listen(process.env.PORT || PORT, () => {
     console.log(`Server running on port ${PORT}`)
