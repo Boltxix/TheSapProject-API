@@ -46,7 +46,8 @@ app.use(helmet.contentSecurityPolicy({
 
 app.use(function (req, res, next) {
     //Passive (10098 - Cross-Domain Misconfiguration) CWE ID 264
-    res.setHeader("Access-Control-Allow-Origin", "https://sap-project-api.herokuapp.com/");
+    res.header("Access-Control-Allow-Origin", "https://master--warm-strudel-d45ad5.netlify.app"); // update the domain name
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     //Passive (10020 - Anti-clickjacking Header) CWE ID 1021
     res.setHeader('X-Frame-Options', 'DENY');
     next();
