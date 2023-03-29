@@ -19,4 +19,4 @@ function handleDatabaseError() {
 
 }
 
-connection.on('error', handleDatabaseError);
+db.on('error', handleDatabaseError);
