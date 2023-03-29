@@ -61,6 +61,6 @@ app.use("/api/student", studentRoutes)
 
 
 
-app.listen(8800, () => {
-    console.log("Connected!")
+app.listen(process.env.PORT || PORT, () => {
+    console.log(`Server running on port ${PORT}`)
 })
