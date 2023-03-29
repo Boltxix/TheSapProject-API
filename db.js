@@ -6,7 +6,7 @@ export const db = mysql2.createConnection({
     password: "33eeacaa",
     database: "heroku_457f3647e6d6a8e"
 })
-
+/*
 function handleDisconnect() {
     db.connect((err) => {
         if (err) {
@@ -29,3 +29,4 @@ function handleDisconnect() {
 }
 
 handleDisconnect()
+*/
