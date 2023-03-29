@@ -3,6 +3,7 @@ import helmet from "helmet"
 import authRoutes from "./routes/auth.js"
 import adminRoutes from "./routes/admin.js"
 import studentRoutes from "./routes/student.js"
+import cors from "cors"
 
 import cookieParser from "cookie-parser"
 
@@ -45,11 +46,17 @@ app.use(helmet.contentSecurityPolicy({
 
 app.use(function (req, res, next) {
     //Passive (10098 - Cross-Domain Misconfiguration) CWE ID 264
-    res.setHeader("Access-Control-Allow-Origin", "https://localhost:3000");
+    res.setHeader("Access-Control-Allow-Origin", "https://sap-project-api.herokuapp.com/");
     //Passive (10020 - Anti-clickjacking Header) CWE ID 1021
     res.setHeader('X-Frame-Options', 'DENY');
     next();
 });
+
+app.use(
+    cors({
+      origin: 'https://master--warm-strudel-d45ad5.netlify.app',
+    })
+  );
 
 app.use(express.json())
 app.use(cookieParser())
