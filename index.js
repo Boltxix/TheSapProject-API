@@ -16,7 +16,7 @@ app.use(helmet.contentSecurityPolicy({
         scriptSrc: ["'self'"],
         styleSrc: ["'self'"],
         imgSrc: ["'self'"],
-        connectSrc: ["'https://warm-strudel-d45ad5.netlify.app/'"],
+        connectSrc: ["'self'", "https://sap-project-api.herokuapp.com/"],
         fontSrc: ["'self'"],
         objectSrc: ["'none'"],
         mediaSrc: ["'self'"],
