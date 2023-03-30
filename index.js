@@ -54,8 +54,8 @@ app.use(function (req, res, next) {
     res.header("Access-Control-Max-Age", "86400");
     //Passive (10020 - Anti-clickjacking Header) CWE ID 1021
     res.setHeader('X-Frame-Options', 'DENY');
+    console.log('Headers being set:', res.getHeaders());
     next();
-    console.log(res.header)
 });
 
 app.use(
