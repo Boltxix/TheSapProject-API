@@ -16,7 +16,7 @@ app.use(helmet.contentSecurityPolicy({
         scriptSrc: ["'self'"],
         styleSrc: ["'self'"],
         imgSrc: ["'self'"],
-        connectSrc: ["'self'", "https://sap-project-api.herokuapp.com", "https://warm-strudel-d45ad5.netlify.app"],
+        connectSrc: ["'self'"],
         fontSrc: ["'self'"],
         objectSrc: ["'none'"],
         mediaSrc: ["'self'"],
@@ -49,7 +49,7 @@ app.use(function (req, res, next) {
     res.header("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload");
     res.header("Access-Control-Allow-Origin", "https://warm-strudel-d45ad5.netlify.app"); // update the domain name
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    res.setHeader("Permissions-Policy", "camera=(), microphone=(), geolocation=()");
+    
     res.setHeader('X-Content-Type-Options', 'nosniff');
     res.header("Access-Control-Max-Age", "86400");
     //Passive (10020 - Anti-clickjacking Header) CWE ID 1021
