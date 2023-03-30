@@ -55,6 +55,7 @@ app.use(function (req, res, next) {
     //Passive (10020 - Anti-clickjacking Header) CWE ID 1021
     res.setHeader('X-Frame-Options', 'DENY');
     next();
+    console.log(res.header)
 });
 
 app.use(
