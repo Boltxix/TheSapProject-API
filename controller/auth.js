@@ -40,7 +40,7 @@ export const login = (req, res) => {
         if (data.length === 0) return res.status(404).json("User not Found!");
 
         //CHECK PASSWORD (to secure use bcrypt.compareSync)
-        const isPasswordCorrect = (bcrypt.compareSync, data[0].password);
+        const isPasswordCorrect = bcrypt.compareSync(req.body.password, data[0].password);
 
         if (!isPasswordCorrect) return res.status(400).json("Wrong username or password!")
 
