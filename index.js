@@ -12,7 +12,7 @@ const app = express()
 app.use(helmet.contentSecurityPolicy({
     //CWE ID 693 Passive (10038 - Content Security Policy (CSP) Header Not Set)
     directives: {
-        defaultSrc: ["'self'"],
+        defaultSrc: ["'self'", "'https://warm-strudel-d45ad5.netlify.app'"],
         scriptSrc: ["'self'"],
         styleSrc: ["'self'"],
         imgSrc: ["'self'"],
